@@ -1,0 +1,7 @@
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\InfoSystemPtactika1.exe.config
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\InfoSystemPtactika1.exe
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\InfoSystemPtactika1.pdb
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.csproj.AssemblyReference.cache
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.csproj.CoreCompileInputs.cache
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.exe
+C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.pdb
