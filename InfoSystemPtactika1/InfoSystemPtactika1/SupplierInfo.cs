@@ -28,8 +28,7 @@ namespace InfoSystemPtactika1
                 supplierInfo.SupplierPhone = supplierPhone;
             }
             else
-            {
-                // Обработка ошибки преобразования телефона
+            { 
                 Console.WriteLine($"Не удалось преобразовать '{supplier[2]}' в числовое значение телефона.");
             }
 
