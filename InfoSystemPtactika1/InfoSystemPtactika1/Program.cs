@@ -11,23 +11,38 @@ namespace InfoSystemPtactika1
     {
         static void Main(string[] args)
         {
-            const string input = "Поступление товара:  2023.04.15  \"Футболка\"  10";
+            ProcessDataFromString();
+            FileProcessor.ProcessDataFromFile("C:\\Users\\Елисей\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\data.txt");
+        }
 
+        private static void ProcessDataFromString()
+        {
+            const string inputProduct = "Поступление товара:  2023.04.15  \"Футболка\"  10";
+            const string inputSupplier = "Поставщик:  \"Поставщик Геральт\"  \"Город Красноярск, улица Семафорная, дом 189\"  89026494492";
+            const string inputPurchase = "Информация о покупке:  2023.04.01  \"Футболка\"  5  500";
+
+            ProcessProduct(inputProduct);
+            ProcessSupplier(inputSupplier);
+            ProcessPurchase(inputPurchase);
+        }
+
+        private static void ProcessProduct(string input)
+        {
             ProductInfo product = ProductInfo.CreateProductFromString(input);
-            
             product.PrintInfo();
+        }
 
-            const string input2 = "Поставщик:  \"Поставщик Геральт\"  \"Город Красноярск, улица Семафорная, дом 189\"  89026494492";
-
-            SupplierInfo supplier = SupplierInfo.CreateSupplierFromString(input2);
-
+        private static void ProcessSupplier(string input)
+        {
+            SupplierInfo supplier = SupplierInfo.CreateSupplierFromString(input);
             supplier.PrintInfo();
+        }
 
-            const string input3 = "Информация о покупке:  2023.04.01  \"Футболка\"  5  500";
-
-            PurchaseHistory purchaseHistory = PurchaseHistory.CreatePurchaseHistoryFromString(input3);
-
+        private static void ProcessPurchase(string input)
+        {
+            PurchaseHistory purchaseHistory = PurchaseHistory.CreatePurchaseHistoryFromString(input);
             purchaseHistory.PrintInfo();
         }
+
     }
 }

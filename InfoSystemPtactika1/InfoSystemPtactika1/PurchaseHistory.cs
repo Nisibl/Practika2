@@ -36,7 +36,7 @@ namespace InfoSystemPtactika1
             Console.WriteLine("Дата покупки: " + PurchaseDate);
             Console.WriteLine("Название товара: " + ProductName);
             Console.WriteLine("Количество: " + Quantity);
-            Console.WriteLine("Цена покупки: " + PurchasePrice + " Рублей");
+            Console.WriteLine("Цена покупки: " + PurchasePrice + " Рублей" + "\n");
         }
     }
 }
