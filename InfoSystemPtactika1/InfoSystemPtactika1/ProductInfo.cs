@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace InfoSystemPtactika1
 {
@@ -29,12 +30,12 @@ namespace InfoSystemPtactika1
 
             return product;
         }
-        public void PrintInfo()
+        public void PrintInfo() 
         {
             Console.WriteLine("Поступление товаров");
             Console.WriteLine("Дата: " + Date);
             Console.WriteLine("Название: " + Name);
-            Console.WriteLine("Количество: " + Quantity);
+            Console.WriteLine("Количество: " + Quantity + "\n");
             
         }
     }

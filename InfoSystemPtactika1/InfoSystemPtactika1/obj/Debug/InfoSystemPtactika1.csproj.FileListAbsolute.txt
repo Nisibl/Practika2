@@ -5,3 +5,10 @@ C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoS
 C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.csproj.CoreCompileInputs.cache
 C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.exe
 C:\Прога 2 курс\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.pdb
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\InfoSystemPtactika1.exe.config
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\InfoSystemPtactika1.exe
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\InfoSystemPtactika1.pdb
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.csproj.AssemblyReference.cache
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.csproj.CoreCompileInputs.cache
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.exe
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSystemPtactika1.pdb
