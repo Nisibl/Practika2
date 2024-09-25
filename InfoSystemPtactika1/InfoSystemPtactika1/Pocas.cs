@@ -14,22 +14,9 @@ namespace InfoSystemPtactika1
             const string inputSupplier = "Поставщик:  \"Поставщик Геральт\"  \"Город Красноярск, улица Семафорная, дом 189\"  89026494492";
             const string inputPurchase = "Информация о покупке:  2023.04.01  \"Футболка\"  5  500";
 
-            string[] stroki = { inputProduct, inputSupplier, inputPurchase };
-            foreach (string stroka  in stroki)
-            {
-                if (stroka.Contains("Поступление товара:"))
-                {
-                    ProcessProduct(stroka);
-                }
-                else if (stroka.Contains("Поставщик:"))
-                {
-                    ProcessSupplier(stroka);
-                }
-                else if (stroka.Contains("Информация о покупке:"))
-                {
-                    ProcessPurchase(stroka);
-                }
-            }
+            ProcessProduct(inputProduct);
+            ProcessSupplier(inputSupplier);
+            ProcessPurchase(inputPurchase);
         }
 
         private static void ProcessProduct(string input)

@@ -13,8 +13,7 @@ namespace InfoSystemPtactika1
         public DateTime Date { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
-
-        public static ProductInfo CreateProductFromString(string input) 
+        public static ProductInfo CreateProductFromString(string input)
         {
 
             string propertiesString = input.Substring(input.IndexOf(":") + 1).Trim();
@@ -30,9 +29,9 @@ namespace InfoSystemPtactika1
 
             return product;
         }
-        public static void PrintInfo() 
+        public void PrintInfo() 
         {
-            Console.WriteLine("Поступление товаров:");
+            Console.WriteLine("Поступление товаров");
             Console.WriteLine("Дата: " + Date);
             Console.WriteLine("Название: " + Name);
             Console.WriteLine("Количество: " + Quantity + "\n");
