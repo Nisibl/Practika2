@@ -11,30 +11,25 @@ namespace InfoSystemPtactika1
         public static void ProcessDataFromString()
         {
             const string inputProduct = "Поступление товара:  2023.04.15  \"Футболка\"  10";
-            const string inputSupplier = "Поставщик:  \"Поставщик Геральт\"  \"Город Красноярск, улица Семафорная, дом 189\"  89026494492";
-            const string inputPurchase = "Информация о покупке:  2023.04.01  \"Футболка\"  5  500";
+            const string inputSupplier = "Поставщик:  \"Поставщик Геральт\"  2024.10.02  \"Тапки\"  10";
+            const string inputPurchase = "Информация о покупке:  2021.04.27  \"Шмотки\"  10  500";
 
-            ProcessProduct(inputProduct);
-            ProcessSupplier(inputSupplier);
-            ProcessPurchase(inputPurchase);
-        }
-
-        private static void ProcessProduct(string input)
-        {
-            ProductInfo product = ProductInfo.CreateProductFromString(input);
-            product.PrintInfo();
-        }
-
-        private static void ProcessSupplier(string input)
-        {
-            SupplierInfo supplier = SupplierInfo.CreateSupplierFromString(input);
-            supplier.PrintInfo();
-        }
-
-        private static void ProcessPurchase(string input)
-        {
-            PurchaseHistory purchaseHistory = PurchaseHistory.CreatePurchaseHistoryFromString(input);
-            purchaseHistory.PrintInfo();
+            string[] stroki = { inputProduct, inputSupplier, inputPurchase };
+            foreach (string stroka in stroki)
+            {
+                if (stroka.Contains("Поступление товара:"))
+                {
+                    Functions.ProcessProduct(stroka);
+                }
+                else if (stroka.Contains("Поставщик:"))
+                {
+                    Functions.ProcessSupplier(stroka);
+                }
+                else if (stroka.Contains("Информация о покупке:"))
+                {
+                    Functions.ProcessPurchase(stroka);
+                }
+            }
         }
     }
 }

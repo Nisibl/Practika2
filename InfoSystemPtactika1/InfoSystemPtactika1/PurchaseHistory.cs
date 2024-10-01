@@ -6,35 +6,35 @@ using System.Threading.Tasks;
 
 namespace InfoSystemPtactika1
 {
-    internal class PurchaseHistory
+    internal class PurchaseHistory : ProductInfo
     {
-        public DateTime PurchaseDate { get; set; }
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
         public decimal PurchasePrice { get; set; }
+        public PurchaseHistory(string name, DateTime data, int quantity, decimal purchasePrice) : base(name, data, quantity)
+        {
+            Name = name;
+            Date = data;
+            Quantity = quantity;
+            PurchasePrice = purchasePrice;
+        }
 
         public static PurchaseHistory CreatePurchaseHistoryFromString(string input)
         {
             string purchaseString = input.Substring(input.IndexOf(":") + 1).Trim();
 
-            string[] purchaseProperties = purchaseString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
+            string[] properties = purchaseString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            PurchaseHistory purchaseHistory = new PurchaseHistory
-            {
-                PurchaseDate = DateTime.ParseExact(purchaseProperties[0], "yyyy.MM.dd", null),
-                ProductName = purchaseProperties[1].Trim('"'),
-                Quantity = int.Parse(purchaseProperties[2]),
-                PurchasePrice = decimal.Parse(purchaseProperties[3])
-            };
-
+            PurchaseHistory purchaseHistory = new PurchaseHistory(properties[1].Trim('"'),
+                DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
+                int.Parse(properties[2]), decimal.Parse(properties[3]));
+           
             return purchaseHistory;
         }
 
-        public void PrintInfo()
+        public override void PrintInfo()
         {
             Console.WriteLine("Информация о покупке:");
-            Console.WriteLine("Дата покупки: " + PurchaseDate);
-            Console.WriteLine("Название товара: " + ProductName);
+            Console.WriteLine("Дата покупки: " + Date);
+            Console.WriteLine("Название: " + Name);
             Console.WriteLine("Количество: " + Quantity);
             Console.WriteLine("Цена покупки: " + PurchasePrice + " Рублей" + "\n");
         }

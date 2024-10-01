@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileProcessor.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="Pocas.cs" />
     <Compile Include="ProductInfo.cs" />
     <Compile Include="Program.cs" />

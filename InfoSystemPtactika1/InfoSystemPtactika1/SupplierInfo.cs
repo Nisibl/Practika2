@@ -6,42 +6,32 @@ using System.Threading.Tasks;
 
 namespace InfoSystemPtactika1
 {
-    internal class SupplierInfo
+    internal class SupplierInfo : ProductInfo
     {
         public string SupplierName { get; set; }
-        public string SupplierAddress { get; set; }
-        public long SupplierPhone { get; set; }
-
+        public SupplierInfo(string name, DateTime data, int quantity, string supplierName) : base(name, data, quantity)
+        {
+            SupplierName = supplierName;
+        }
         public static SupplierInfo CreateSupplierFromString(string input)
         {
             string supplierString = input.Substring(input.IndexOf(":") + 1).Trim();
-            string[] supplier = supplierString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
+            string[] properties = supplierString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            SupplierInfo supplierInfo = new SupplierInfo
-            {
-                SupplierName = supplier[0].Trim('"'),
-                SupplierAddress = supplier[1].Trim('"')
-            };
-
-            if (long.TryParse(supplier[2], out long supplierPhone))
-            {
-                supplierInfo.SupplierPhone = supplierPhone;
-            }
-            else
-            { 
-                Console.WriteLine($"Не удалось преобразовать '{supplier[2]}' в числовое значение телефона.");
-            }
+            SupplierInfo supplierInfo = new SupplierInfo(properties[2].Trim('"'),
+                DateTime.ParseExact(properties[1], "yyyy.MM.dd", null),
+                int.Parse(properties[3]),properties[0].Trim('"'));
 
             return supplierInfo;
         }
 
-        public void PrintInfo()
+        public override void PrintInfo()
         {
             Console.WriteLine("Информация о поставщике:");
-            Console.WriteLine("Наименование: " + SupplierName);
-            Console.WriteLine("Адрес: " + SupplierAddress);
-            Console.WriteLine("Телефон: " + SupplierPhone + "\n");
-                
+            Console.WriteLine("Имя: " + SupplierName);
+            Console.WriteLine("Дата: " + Date);
+            Console.WriteLine("Название: " + Name);
+            Console.WriteLine("Количество: " + Quantity + "\n");
         }
     }
 }

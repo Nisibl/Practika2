@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace InfoSystemPtactika1
         public DateTime Date { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
+        public ProductInfo(string name, DateTime data, int quantity)
+        {
+            Name = name;
+            Date = data;
+            Quantity = quantity;
+        }
         public static ProductInfo CreateProductFromString(string input)
         {
 
@@ -20,16 +27,13 @@ namespace InfoSystemPtactika1
 
             string[] properties = propertiesString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            ProductInfo product = new ProductInfo
-            {
-                Date = DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
-                Name = properties[1].Trim('"'),
-                Quantity = int.Parse(properties[2])
-            };
+            ProductInfo product = new ProductInfo(properties[1].Trim('"'),
+                DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
+                int.Parse(properties[2]));
 
             return product;
         }
-        public void PrintInfo() 
+        public virtual void PrintInfo() 
         {
             Console.WriteLine("Поступление товаров");
             Console.WriteLine("Дата: " + Date);
