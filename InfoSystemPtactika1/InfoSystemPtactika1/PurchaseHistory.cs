@@ -8,35 +8,28 @@ namespace InfoSystemPtactika1
 {
     internal class PurchaseHistory : ProductInfo
     {
-        public decimal PurchasePrice { get; set; }
-        public PurchaseHistory(string name, DateTime data, int quantity, decimal purchasePrice) : base(name, data, quantity)
+        public string Price { get; set; }
+
+        public PurchaseHistory(string name, DateTime data, int quantity, string price) : base(name, data, quantity, DataType.PurchaseHistory)
         {
-            Name = name;
-            Date = data;
-            Quantity = quantity;
-            PurchasePrice = purchasePrice;
+            Price = price;
         }
 
         public static PurchaseHistory CreatePurchaseHistoryFromString(string input)
         {
             string purchaseString = input.Substring(input.IndexOf(":") + 1).Trim();
-
             string[] properties = purchaseString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            PurchaseHistory purchaseHistory = new PurchaseHistory(properties[1].Trim('"'),
+            return new PurchaseHistory(properties[1].Trim('"'),
                 DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
-                int.Parse(properties[2]), decimal.Parse(properties[3]));
-           
-            return purchaseHistory;
+                int.Parse(properties[2]),
+                properties[3].Trim('"'));
         }
 
         public override void PrintInfo()
         {
-            Console.WriteLine("Информация о покупке:");
-            Console.WriteLine("Дата покупки: " + Date);
-            Console.WriteLine("Название: " + Name);
-            Console.WriteLine("Количество: " + Quantity);
-            Console.WriteLine("Цена покупки: " + PurchasePrice + " Рублей" + "\n");
+            Console.WriteLine("Сумма покупки: " + Price + " Рублей");
+            base.PrintInfo();
         }
     }
 }

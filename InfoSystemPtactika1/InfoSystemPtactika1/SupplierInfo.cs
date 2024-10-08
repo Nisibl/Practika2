@@ -9,29 +9,27 @@ namespace InfoSystemPtactika1
     internal class SupplierInfo : ProductInfo
     {
         public string SupplierName { get; set; }
-        public SupplierInfo(string name, DateTime data, int quantity, string supplierName) : base(name, data, quantity)
+
+        public SupplierInfo(string name, DateTime data, int quantity, string supplierName) : base(name, data, quantity, DataType.SupplierInfo)
         {
             SupplierName = supplierName;
         }
+
         public static SupplierInfo CreateSupplierFromString(string input)
         {
             string supplierString = input.Substring(input.IndexOf(":") + 1).Trim();
             string[] properties = supplierString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            SupplierInfo supplierInfo = new SupplierInfo(properties[2].Trim('"'),
+            return new SupplierInfo(properties[2].Trim('"'),
                 DateTime.ParseExact(properties[1], "yyyy.MM.dd", null),
-                int.Parse(properties[3]),properties[0].Trim('"'));
-
-            return supplierInfo;
+                int.Parse(properties[3]),
+                properties[0].Trim('"'));
         }
 
         public override void PrintInfo()
         {
-            Console.WriteLine("Информация о поставщике:");
-            Console.WriteLine("Имя: " + SupplierName);
-            Console.WriteLine("Дата: " + Date);
-            Console.WriteLine("Название: " + Name);
-            Console.WriteLine("Количество: " + Quantity + "\n");
+            Console.WriteLine("Поставщик: " + SupplierName);
+            base.PrintInfo();
         }
     }
 }

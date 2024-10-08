@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\infosystemptactika1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|c:\\users\\\u0435\u043B\u0438\u0441\u0435\u0439\\documents\\github\\practika2\\infosystemptactika1\\infosystemptactika1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,24 +11,12 @@
       "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\supplierinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\infosystemptactika1\\purchasehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\purchasehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|c:\\users\\\u0435\u043B\u0438\u0441\u0435\u0439\\documents\\github\\practika2\\infosystemptactika1\\infosystemptactika1\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\infosystemptactika1\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\infosystemptactika1\\fileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\fileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|c:\\users\\\u0435\u043B\u0438\u0441\u0435\u0439\\documents\\github\\practika2\\infosystemptactika1\\infosystemptactika1\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\infosystemptactika1\\pocas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\pocas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\infosystemptactika1\\purchasehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E7BB003-E298-45E2-BE7C-15CFB6E94800}|InfoSystemPtactika1\\InfoSystemPtactika1.csproj|solutionrelative:infosystemptactika1\\purchasehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,55 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Pocas.cs",
-              "DocumentMoniker": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\Pocas.cs",
-              "RelativeDocumentMoniker": "InfoSystemPtactika1\\Pocas.cs",
-              "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\Pocas.cs",
-              "RelativeToolTip": "InfoSystemPtactika1\\Pocas.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:20:02.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Functions.cs",
-              "DocumentMoniker": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\Functions.cs",
-              "RelativeDocumentMoniker": "InfoSystemPtactika1\\Functions.cs",
-              "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\Functions.cs",
-              "RelativeToolTip": "InfoSystemPtactika1\\Functions.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T14:46:23.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FileProcessor.cs",
-              "DocumentMoniker": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\FileProcessor.cs",
-              "RelativeDocumentMoniker": "InfoSystemPtactika1\\FileProcessor.cs",
-              "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\FileProcessor.cs",
-              "RelativeToolTip": "InfoSystemPtactika1\\FileProcessor.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T13:09:28.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PurchaseHistory.cs",
               "DocumentMoniker": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\PurchaseHistory.cs",
               "RelativeDocumentMoniker": "InfoSystemPtactika1\\PurchaseHistory.cs",
               "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\PurchaseHistory.cs",
               "RelativeToolTip": "InfoSystemPtactika1\\PurchaseHistory.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T11:41:51.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T11:41:51.565Z"
             },
             {
               "$type": "Document",
@@ -108,23 +56,21 @@
               "RelativeDocumentMoniker": "InfoSystemPtactika1\\SupplierInfo.cs",
               "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\SupplierInfo.cs",
               "RelativeToolTip": "InfoSystemPtactika1\\SupplierInfo.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T11:41:22.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T11:41:22.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ProductInfo.cs",
               "DocumentMoniker": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\ProductInfo.cs",
               "RelativeDocumentMoniker": "InfoSystemPtactika1\\ProductInfo.cs",
               "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\ProductInfo.cs",
               "RelativeToolTip": "InfoSystemPtactika1\\ProductInfo.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAA3wBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T10:42:05.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T10:42:05.194Z"
             },
             {
               "$type": "Document",
@@ -134,7 +80,7 @@
               "RelativeDocumentMoniker": "InfoSystemPtactika1\\Program.cs",
               "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0441\u0435\u0439\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\InfoSystemPtactika1\\Program.cs",
               "RelativeToolTip": "InfoSystemPtactika1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-10T10:40:25.278Z",
               "EditorCaption": ""

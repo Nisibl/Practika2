@@ -14,32 +14,30 @@ namespace InfoSystemPtactika1
         public DateTime Date { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
-        public ProductInfo(string name, DateTime data, int quantity)
+        public DataType Type { get; set; }
+        public ProductInfo(string name, DateTime data, int quantity, DataType type)
         {
             Name = name;
             Date = data;
             Quantity = quantity;
+            Type = type;
         }
-        public static ProductInfo CreateProductFromString(string input)
+        public static ProductInfo CreateProductFromString(string input, DataType type)
         {
-
             string propertiesString = input.Substring(input.IndexOf(":") + 1).Trim();
-
             string[] properties = propertiesString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            ProductInfo product = new ProductInfo(properties[1].Trim('"'),
+            return new ProductInfo(properties[1].Trim('"'),
                 DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
-                int.Parse(properties[2]));
-
-            return product;
+                int.Parse(properties[2]),
+                type);
         }
-        public virtual void PrintInfo() 
+        public virtual void PrintInfo()
         {
-            Console.WriteLine("Поступление товаров");
+            Console.WriteLine("Тип: " + Type);
             Console.WriteLine("Дата: " + Date);
             Console.WriteLine("Название: " + Name);
             Console.WriteLine("Количество: " + Quantity + "\n");
-            
         }
     }
 }
