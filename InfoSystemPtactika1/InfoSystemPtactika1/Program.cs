@@ -4,12 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-enum DataType
-{
-    ProductInfo,
-    SupplierInfo,
-    PurchaseHistory
-}
+using System.Xml.Linq;
 
 namespace InfoSystemPtactika1
 {
@@ -17,57 +12,43 @@ namespace InfoSystemPtactika1
     {
         static void Main(string[] args)
         {
-            List<ProductInfo> products = new List<ProductInfo>();
-            List<SupplierInfo> suppliers = new List<SupplierInfo>();
-            List<PurchaseHistory> purchases = new List<PurchaseHistory>();
-            ProcessDataFromFile("C:\\Users\\Елисей\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\data.txt", products, suppliers, purchases);
-
-            Console.WriteLine("Информация о поступлении товаров:");
-            foreach (var product in products)
-            {
-                product.PrintInfo();
-            }
-
-            Console.WriteLine("Информация о поставщиках:");
-            foreach (var supplier in suppliers)
-            {
-                supplier.PrintInfo();
-            }
-
-            Console.WriteLine("Информация о покупках:");
-            foreach (var purchase in purchases)
-            {
-                purchase.PrintInfo();
-            }
-        }
-
-        public static void ProcessDataFromFile(string filePath = "data.txt",
-            List<ProductInfo> products = null, List<SupplierInfo> suppliers = null, List<PurchaseHistory> purchases = null)
-        {
-            if (!File.Exists(filePath))
-            {
-                Console.WriteLine($"Файл '{filePath}' не найден.");
-                return;
-            }
-
-            List<string> lines = File.ReadAllLines(filePath).ToList();
+            string[] lines = File.ReadAllLines("C:\\Users\\Елисей\\Documents\\GitHub\\Practika2\\InfoSystemPtactika1\\data.txt");
+            List<Abstract> product = new List<Abstract>();
+            ProductInfo productInfo = new ProductInfo(new DateTime(2000,01,01), "", 0);
+            SupplierInfo supplierInfo = new SupplierInfo("", new DateTime(2000,01,01), "", 0);
+            PurchaseHistory purchaseHistory = new PurchaseHistory(new DateTime(2000, 01, 01), "", 0, 0);
             foreach (string line in lines)
             {
-                if (line.Contains("ProductInfo:"))
+                string[] lineCount = line.Split(';');
+                string[] lineType = lineCount[0].ToString().Split(':');
+                switch (lineType[0])
                 {
-                    ProductInfo product = ProductInfo.CreateProductFromString(line, DataType.ProductInfo);
-                    products.Add(product);
+                    case "ProductInfo":
+                        {
+                            product.Add(productInfo.CreateFromString(line));
+                            break;
+                        }
+                    case "SupplierInfo":
+                        {
+                            product.Add(supplierInfo.CreateFromString(line));
+                            break;
+                        }
+                    case "PurchaseHistory":
+                        {
+                            product.Add(purchaseHistory.CreateFromString(line));
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Такого типа не существует");
+                            break;
+                        }
                 }
-                else if (line.Contains("SupplierInfo:"))
-                {
-                    SupplierInfo supplier = SupplierInfo.CreateSupplierFromString(line);
-                    suppliers.Add(supplier);
-                }
-                else if (line.Contains("PurchaseHistory:"))
-                {
-                    PurchaseHistory purchaseHistory = PurchaseHistory.CreatePurchaseHistoryFromString(line);
-                    purchases.Add(purchaseHistory);
-                }
+            }
+
+            foreach (var prod in product)
+            {
+                prod.PrintInfo();
             }
         }
     }

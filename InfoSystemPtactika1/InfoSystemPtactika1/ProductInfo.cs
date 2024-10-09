@@ -9,32 +9,29 @@ using System.Threading.Tasks;
 
 namespace InfoSystemPtactika1
 {
-    internal class ProductInfo
+    internal class ProductInfo : Abstract
     {
         public DateTime Date { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
-        public DataType Type { get; set; }
-        public ProductInfo(string name, DateTime data, int quantity, DataType type)
+        public ProductInfo(DateTime data, string name, int quantity)
         {
             Name = name;
             Date = data;
             Quantity = quantity;
-            Type = type;
         }
-        public static ProductInfo CreateProductFromString(string input, DataType type)
+        public override Abstract CreateFromString(string input)
         {
             string propertiesString = input.Substring(input.IndexOf(":") + 1).Trim();
             string[] properties = propertiesString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            return new ProductInfo(properties[1].Trim('"'),
-                DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
-                int.Parse(properties[2]),
-                type);
+            return new ProductInfo(DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
+                properties[1].Trim('"'), int.Parse(properties[2]));
         }
-        public virtual void PrintInfo()
+        public override void PrintInfo()
         {
-            Console.WriteLine("Тип: " + Type);
+            Type metype = typeof(ProductInfo);
+            Console.WriteLine("Тип: " + metype.Name);
             Console.WriteLine("Дата: " + Date);
             Console.WriteLine("Название: " + Name);
             Console.WriteLine("Количество: " + Quantity + "\n");

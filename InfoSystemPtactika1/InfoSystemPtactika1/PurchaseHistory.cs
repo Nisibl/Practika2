@@ -6,30 +6,38 @@ using System.Threading.Tasks;
 
 namespace InfoSystemPtactika1
 {
-    internal class PurchaseHistory : ProductInfo
+    internal class PurchaseHistory : Abstract
     {
-        public string Price { get; set; }
+        public DateTime Date { get; set; }
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+        public int Price { get; set; }
 
-        public PurchaseHistory(string name, DateTime data, int quantity, string price) : base(name, data, quantity, DataType.PurchaseHistory)
+        public PurchaseHistory(DateTime data, string name, int quantity, int price)
         {
             Price = price;
+            Date = data;
+            Name = name;
+            Quantity = quantity;
         }
 
-        public static PurchaseHistory CreatePurchaseHistoryFromString(string input)
+        public override Abstract CreateFromString(string input)
         {
             string purchaseString = input.Substring(input.IndexOf(":") + 1).Trim();
             string[] properties = purchaseString.Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
 
-            return new PurchaseHistory(properties[1].Trim('"'),
-                DateTime.ParseExact(properties[0], "yyyy.MM.dd", null),
-                int.Parse(properties[2]),
-                properties[3].Trim('"'));
+            return new PurchaseHistory(DateTime.ParseExact(properties[0], "yyyy.MM.dd", null), 
+                properties[1].Trim('"'), int.Parse(properties[2]), int.Parse(properties[3]));
         }
 
         public override void PrintInfo()
         {
+            Type metype = typeof(PurchaseHistory);
+            Console.WriteLine("Тип: " + metype.Name);
             Console.WriteLine("Сумма покупки: " + Price + " Рублей");
-            base.PrintInfo();
+            Console.WriteLine("Дата: " + Date);
+            Console.WriteLine("Название: " + Name);
+            Console.WriteLine("Количество: " + Quantity + "\n");
         }
     }
 }
