@@ -32,7 +32,7 @@ namespace InfoSystemPtactika1
         {
             Type metype = typeof(ProductInfo);
             Console.WriteLine("Тип: " + metype.Name);
-            Console.WriteLine("Дата: " + Date);
+            Console.WriteLine("Дата: " + Date.ToShortDateString());
             Console.WriteLine("Название: " + Name);
             Console.WriteLine("Количество: " + Quantity + "\n");
         }

@@ -35,7 +35,7 @@ namespace InfoSystemPtactika1
             Type metype = typeof(PurchaseHistory);
             Console.WriteLine("Тип: " + metype.Name);
             Console.WriteLine("Сумма покупки: " + Price + " Рублей");
-            Console.WriteLine("Дата: " + Date);
+            Console.WriteLine("Дата: " + Date.ToShortDateString());
             Console.WriteLine("Название: " + Name);
             Console.WriteLine("Количество: " + Quantity + "\n");
         }
