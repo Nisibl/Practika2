@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace InfoSystemPtactika1
 {
-    internal class ProductInfo : Abstract
+    public class ProductInfo : Abstract
     {
         public DateTime Date { get; set; }
         public string Name { get; set; }

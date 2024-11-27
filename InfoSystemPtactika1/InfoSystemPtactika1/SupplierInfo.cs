@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace InfoSystemPtactika1
 {
-    internal class SupplierInfo : Abstract
+    public class SupplierInfo : Abstract
     {
         public DateTime Date { get; set; }
         public string Name { get; set; }

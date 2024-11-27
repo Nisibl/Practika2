@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfoSystemPtactika1
 {
-    internal class PurchaseHistory : Abstract
+    public class PurchaseHistory : Abstract
     {
         public DateTime Date { get; set; }
         public string Name { get; set; }
