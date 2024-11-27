@@ -10,7 +10,21 @@ namespace InfoSystemPtactika1
     {
         public static int CountNullInStr(string str)
         {
-            return -1;
+            if (string.IsNullOrEmpty(str))
+            {
+                throw new Exception("Пустая строка");
+            }
+
+            int c = 0;
+
+            foreach (char b in str)
+            {
+                if (b == '0')
+                {
+                    c++;
+                }
+            }
+            return c;
         }
     }
 }
