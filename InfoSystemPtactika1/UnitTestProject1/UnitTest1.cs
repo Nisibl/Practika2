@@ -3,6 +3,8 @@ using System;
 using InfoSystemPtactika1;
 using NUnit.Compatibility;
 using System.IO;
+using NUnit.Framework;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace UnitTestProject1
 {
@@ -10,82 +12,78 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [NUnit.Framework.Test]
-        public void CreateProductInfo_ValidInput_ReturnsProductInfo()
+        public void CompasionProductInfo()
         {
-            // Arrange
-            string input = "ProductInfo:  2023.01.01  Хамстер  10";
-            ProductInfo productInfo = new ProductInfo(new DateTime(2023,01,01), "Хамстер", 10);
+            DateTime Date = new DateTime(2023, 01, 01);
+            string NameProduct = "Хамстер";
+            int CountProducts = 10;
+            ProductInfo productInfo = new ProductInfo(Date, NameProduct, CountProducts);
+            ReferenceEquals(productInfo, "2023.01.01  Хамстер  10");
+        }
 
-            // Act
-            ProductInfo result = productInfo.CreateFromString(input) as ProductInfo;
+        [NUnit.Framework.Test]
+        public void ComparisonPurchaseHistory()
+        {
+            DateTime Date = new DateTime(2023, 01, 01);
+            string NameProduct = "Хамстер";
+            int CountProducts = 10;
+            int SumPurchase = 52;
+            PurchaseHistory purchaseHistory = new PurchaseHistory(Date, NameProduct, CountProducts, SumPurchase);
+            ReferenceEquals(purchaseHistory, "2023.01.01  Хамстер  10  52");
+        }
 
-            // Assert
+        [NUnit.Framework.Test]
+        public void ComparisonSupplierInfo()
+        {
+            string NamePost = "Поставщик Геральт";
+            DateTime Date = new DateTime(2024, 10, 02);
+            string NameProduct = "Тапки";
+            int Count = 101;
+            SupplierInfo supplierInfo = new SupplierInfo(NamePost, Date, NameProduct, Count);
+            ReferenceEquals(supplierInfo, "Поставщик Геральт  2024.10.02  Тапки  101");
+        }
 
-            ReferenceEquals(result, productInfo);
+        [NUnit.Framework.Test]
+        public void CreateConstructProductInfo()
+        {
+            DateTime date = new DateTime(2023, 01, 01);
+            string nameproduct = "asd";
+            string countproducts = "SA";
+
+            Assert.ThrowsException<FormatException>(() =>
+            {
+                ProductInfo productInfo = new ProductInfo(date, nameproduct, Convert.ToInt32(countproducts));
+            });
+        }
+
+        [NUnit.Framework.Test]
+        public void CreateConstructPurchaseHistory()
+        {
+            DateTime Date = new DateTime(2023, 01, 01);
+            string NameProduct = "Хамстер";
+            int CountProducts = 10;
+            string SumPurchase = "dsjfvnskjv";
+
+            Assert.ThrowsException<FormatException>(() =>
+            {
+                PurchaseHistory purchaseHistory = new PurchaseHistory(Date, NameProduct, CountProducts, Convert.ToInt32(SumPurchase));
+            });
 
         }
 
         [NUnit.Framework.Test]
-        public void CreatePurchaseHistory_ValidInput_ReturnsPurchaseHistory()
+        public void CreateConstructSupplierInfo()
         {
-            // Arrange
-            string input = "ProductInfo:  2023.01.01  Хамстер  10  52";
-            PurchaseHistory pur = new PurchaseHistory(new DateTime(2023,01,01), "Хамстер", 10, 52);
+            string NamePost = "Поставщик Геральт";
+            DateTime Date = new DateTime(2024, 10, 02);
+            string NameProduct = "Тапки";
+            string Count = "kjbnjbebrn43589";
 
-            // Act
-            PurchaseHistory result = pur.CreateFromString(input) as PurchaseHistory;
+            Assert.ThrowsException<FormatException>(() =>
+            {
+                SupplierInfo supplierInfo = new SupplierInfo(NamePost,Date,NameProduct,Convert.ToInt32(Count));
+            });
 
-            // Assert
-
-            ReferenceEquals(result, pur);
-        }
-
-        [NUnit.Framework.Test]
-        public void SupplierInfo_ValidInput_ReturnsSupplierInfo()
-        {
-            // Arrange
-            string input = "Поставщик Геральт  2024.10.02  Тапки  101  ";
-            SupplierInfo pur = new SupplierInfo("Поставщик Геральт", new DateTime(2024,10,02), "Тапки", 101);
-
-            // Act
-            SupplierInfo result = pur.CreateFromString(input) as SupplierInfo;
-
-            // Assert
-
-            ReferenceEquals(result, pur);
-        }
-
-        [NUnit.Framework.Test]
-        public void CreateFromString_ProductInfo_InvalidDateFormat_ThrowsFormatException()
-        {
-            // Arrange
-            string input = "ProductInfo:  2023.01.01rufhvuivgukr  Товар1  10";
-            var productInfo = new ProductInfo(new DateTime(2023,01,01), "Товар1", 10);
-
-            // Act & Assert
-            Assert.ThrowsException<FormatException>(() => productInfo.CreateFromString(input));
-        }
-
-        [NUnit.Framework.Test]
-        public void CreateFromString_SupplierInfo_InvalidDateFormat_ThrowsFormatException()
-        {
-            // Arrange
-            string input = "Поставщик Геральт  20fjkbgkbgs24.10.02  Тапки  101  ";
-            var produc = new SupplierInfo("Поставщик Геральт", new DateTime(2024,10,02), "Тапки", 101);
-
-            // Act & Assert
-            Assert.ThrowsException<FormatException>(() => produc.CreateFromString(input));
-        }
-
-        [NUnit.Framework.Test]
-        public void CreateFromString_PurchaseHistory_InvalidDateFormat_ThrowsFormatException()
-        {
-            // Arrange
-            string input = "2024.0гшуктцшимц1.10  Боты  5ро рио2  69  ";
-            var produc = new PurchaseHistory(new DateTime(2024,01,01), "Боты", 52, 69);
-
-            // Act & Assert
-            Assert.ThrowsException<FormatException>(() => produc.CreateFromString(input));
         }
 
     }
