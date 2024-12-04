@@ -10,9 +10,9 @@ namespace DopTask
         [TestMethod]
         public void Test_CountNull()
         {
-            string str = "2023.01.01  Хамстер  10  52";
-            int ex = 4;
-            int gg = Null.CountNullInStr(str);
+            string str = "00010000100000";
+            int ex = 5;
+            int gg = Null.LongestZeroSequenceInStr(str);
 
             Assert.AreEqual(ex, gg);
         }
@@ -20,9 +20,9 @@ namespace DopTask
         [TestMethod]
         public void Test_NullZeroInStr()
         {
-            string str = "223.1.1  Хамстер  1  52";
+            string str = "111";
             int ex = 0;
-            int gg = Null.CountNullInStr(str);
+            int gg = Null.LongestZeroSequenceInStr(str);
 
             Assert.AreEqual(ex, gg);
         }
@@ -32,7 +32,7 @@ namespace DopTask
         {
             string str = "";
 
-            var exep = Assert.ThrowsException<Exception>(() => Null.CountNullInStr(str));
+            var exep = Assert.ThrowsException<Exception>(() => Null.LongestZeroSequenceInStr(str));
             Assert.AreEqual("Пустая строка", exep.Message);
             
         }

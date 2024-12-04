@@ -8,23 +8,32 @@ namespace InfoSystemPtactika1
 {
     public class Null
     {
-        public static int CountNullInStr(string str)
+        public static int LongestZeroSequenceInStr(string str)
         {
             if (string.IsNullOrEmpty(str))
             {
                 throw new Exception("Пустая строка");
             }
 
-            int c = 0;
+            int maxCount = 0;
+            int currentCount = 0; 
 
             foreach (char b in str)
             {
                 if (b == '0')
                 {
-                    c++;
+                    currentCount++; 
+                    if (currentCount > maxCount)
+                    {
+                        maxCount = currentCount; 
+                    }
+                }
+                else
+                {
+                    currentCount = 0; 
                 }
             }
-            return c;
+            return maxCount; 
         }
     }
 }
