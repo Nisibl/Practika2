@@ -35,3 +35,11 @@ C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemP
 C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\System.ValueTuple.xml
 C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\obj\Debug\InfoSyst.92BF23FD.Up2Date
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.abstractions.dll
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.assert.dll
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.core.dll
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.abstractions.xml
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.assert.xml
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.core.xml
+C:\Users\Елисей\Documents\GitHub\Practika2\InfoSystemPtactika1\InfoSystemPtactika1\bin\Debug\xunit.execution.desktop.xml
